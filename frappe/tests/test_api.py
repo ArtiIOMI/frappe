@@ -282,7 +282,11 @@ class TestMethodAPI(FrappeAPITestCase):
 		self.assertEqual(response.status_code, 401)
 
 		authorization_token = "NonExistentKey:INCORRECT"
+<<<<<<< HEAD
 		response = self.get(self.method("frappe.auth.get_logged_user"))
+=======
+		response = self.get(self.method_path("frappe.auth.get_logged_user"))
+>>>>>>> eb45da3913 (feat: Allow usage of `print()` within `safe_exec()` (#23084))
 		self.assertEqual(response.status_code, 401)
 
 		authorization_token = None
